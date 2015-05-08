@@ -19,18 +19,26 @@
             <div id="checkin_location" class="settingCard">
                 <i style="float:left;margin:28px" class="fa fa-map-marker fa-2x"></i>
                 <h1>Check-In Location</h1>
-                <p>Choose location for check-in</p>
+                <p>Choose location for check-in.</p>
                 <br>
-                <hr>
-                <p>Location: </p><div id="location"></div>
+                <div id="location" class="codebox">
+                    <code>
+                        Tap to scan
+                    </code>
+                </div>
+
             </div>
             <div id="checkin_item" class="settingCard">
                 <i style="float:left;margin:28px" class="fa fa-dropbox fa-2x"></i>
                 <h1>Check-In Item</h1>
                 <p>Choose item for check-in.</p>
                 <br>
-                <hr>
-                <p>Item: </p><div id="item"></div>
+                <div id="item" class="codebox">
+                    <code>
+                        Tap to scan
+                    </code>
+                </div>
+
             </div>
 
             <div id="checkin_submit" class="card">
@@ -45,7 +53,7 @@
         event.preventDefault()
         startScan();
         var value = window.localStorage.getItem("last_scan_result");
-        $('#location').html(value)
+        $('#location').html('Location: '+ value)
 
     });
 
@@ -53,7 +61,7 @@
         event.preventDefault()
         startScan();
         var value = window.localStorage.getItem("last_scan_result");
-        $('#item').html(value)
+        $('#item').html('Item: '+ value)
     });
 
     $("#checkin_submit").click(function() {
