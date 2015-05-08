@@ -14,39 +14,26 @@
         </div>			
 		
         <div class="content">
-            <div id="information" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-at fa-2x"></i>
-                <h1>Information Scan</h1>
-                <p>retrieve information about asset.</p>
+            <div id="checkin_location" class="settingCard">
+                <i style="float:left;margin:28px" class="fa fa-map-marker fa-2x"></i>
+                <h1>Check-In Location</h1>
+                <p>Choose location for check-in</p>
+                <p>Location: </p>
             </div>
-			<div id="checkin" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-refresh fa-2x"></i>
-                <h1>Check-In Scan</h1>
-                <p>Check asset into location.</p>
-            </div>
-			<div id="shift" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-list fa-2x"></i>
-                <h1>Shift Scan</h1>
-                <p>Scan in and out of Shift.</p>
+            <div id="checkin_item" class="settingCard">
+                <i style="float:left;margin:28px" class="fa fa-dropbox fa-2x"></i>
+                <h1>Check-In Item</h1>
+                <p>Choose item for check-in.</p>
+                <p>Check in Item: </p>
             </div>
         </div>
         
 	<footer class="footer">&copy; 2015 Viewmetrics</footer>
 	<script>
-    $("#information").click(function() {
-            event.preventDefault()
-        });
-
     $("#checkin").click(function() {
         event.preventDefault()
         window.location = "checkin.html"
     });
-
-    $("#shift").click(function() {
-        event.preventDefault()
-        window.location = "shift.html"
-    });
-
 	</script>
     </body>
 

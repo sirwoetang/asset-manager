@@ -6,6 +6,12 @@
 		<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <script src="assets/js/jquery-2.1.0.min.js"></script>
 		<script src="phonegap.js"></script>
+        <script>
+            function exitFromApp()
+            {
+                navigator.app.exitApp();
+            }
+        </script>
     </head>
     <body>
         
@@ -15,8 +21,8 @@
 		
         <div class="content">
             <div id="scan_page" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-at fa-2x"></i>
-                <h1>Scan</h1>
+                <i style="float:left;margin:28px" class="fa fa-barcode fa-2x"></i>
+                <h1>Scan Assets</h1>
                 <p>Use phone camera to scan QR-code or Barcode.</p>
             </div>
 			<div id="sync" class="settingCard">
@@ -40,11 +46,12 @@
 	<script>
     $("#scan_page").click(function() {
             event.preventDefault()
+            window.location = "scan.html"
         });
 
     $("#sync").click(function() {
         event.preventDefault()
-        window.location = "route.html"
+        window.location = "index.html"
     });
 
     $("#about").click(function() {
@@ -54,7 +61,7 @@
 
     $("#logout").click(function() {
         event.preventDefault()
-        window.location = "index.html"
+        exitFromApp()
     });
 	</script>
     </body>

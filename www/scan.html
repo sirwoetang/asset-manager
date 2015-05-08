@@ -15,17 +15,17 @@
 		
         <div class="content">
             <div id="information" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-at fa-2x"></i>
+                <i style="float:left;margin:28px" class="fa fa-info-circle fa-2x"></i>
                 <h1>Information Scan</h1>
                 <p>Retrieve information about asset.</p>
             </div>
 			<div id="checkin" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-refresh fa-2x"></i>
+                <i style="float:left;margin:28px" class="fa fa-map-marker fa-2x"></i>
                 <h1>Check-In Scan</h1>
                 <p>Check asset into location.</p>
             </div>
 			<div id="shift" class="settingCard">
-                <i style="float:left;margin:28px" class="fa fa-list fa-2x"></i>
+                <i style="float:left;margin:28px" class="fa fa-clock-o fa-2x"></i>
                 <h1>Shift Scan</h1>
                 <p>Scan in and out of shift.</p>
             </div>
@@ -35,6 +35,7 @@
 	<script>
     $("#information").click(function() {
             event.preventDefault()
+            window.location = "information.html"
         });
 
     $("#checkin").click(function() {
