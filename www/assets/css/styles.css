@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;   
+    /*background:#E0E0E0;*/
+    background:#D3D3D3;
+    padding:0px;
+    margin:0px;
+    color:#333;
+    min-height:100%;
+}
+
+.header {
+    text-align:center;
+    position:fixed;
+    height:65px;
+    left:0px;
+    right:0px;
+	background-color: #555555;
+    padding:8px 0px 0px 15px;
+    border-bottom:1px solid #CCC;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.content {  
+    position:fixed;
+    top:73px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:scroll;
+    -webkit-overflow-scrolling:touch;
+    margin-bottom:30px;
+}
+
+.footer {
+	position:fixed;
+	height:18px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	color:888;
+	text-align:center;
+	padding:0px 10px 0px 10px;
+	font-size:12px;
+	color: #fff;
+	padding: 10px;
+	background-color: #555555;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+
+
+.card {
+	overflow:hidden;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 6px;
+	margin-right: 6px;
+	margin-left: 6px;
+	margin-top: 6px;
+	background-color: #f9f9f9;
+	border-color: lightgrey;
+}
+
+.card h1 {
+    margin:0px;
+    padding:10px;
+    padding-bottom:0px;
+	font-size:1.2em;
+}
+
+.card p {
+    margin:0px;
+    padding:10px;
+}
+
+.settingCard {
+	overflow:hidden;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 1px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 1px;
+	background-color: #f9f9f9;
+	border-color: lightgrey;
+}
+.settingCard h1 {
+	margin:0px;
+	margin-top:9px;
+	padding:10px;
+	padding-bottom:0px;
+	font-size:1.1em;
+}
+
+.settingCard p {
+	margin:0px;
+	padding:10px;
+}
+
+.card_status_image {
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+	float:left;
+}
+
+.action_menuIcon {
+    color: #fff;
+}
+
+
+.settingIcon {
+    color: #fff;
+}
+
+#loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+}

@@ -1,0 +1,239 @@
+.checkbox-dropdown {
+    width: 200px;
+    border: 1px solid silver;
+    cursor: pointer; /* use correct mouse pointer when hovering over the dropdown */
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Display CSS arrow to the right of the dropdown text */
+.checkbox-dropdown:after {
+    content:'';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+}
+
+/* Reverse the CSS arrow when the dropdown is active */
+.checkbox-dropdown.is-active:after {
+    border-bottom-color: #000;
+    border-top-color: #fff;
+    margin-top: -9px;
+}
+
+.checkbox-dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -1px; /* align the dropdown to the left */
+    right: -1px; /* align the dropdown to the right */
+    opacity: 0; /* hide the dropdown */
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    pointer-events: none; /* avoid mouse click events inside the dropdown */
+}
+.is-active .checkbox-dropdown-list {
+    opacity: 1; /* display the dropdown */
+    pointer-events: auto; /* make sure that the user still can select checkboxes */
+}
+
+.checkbox-dropdown-list li label {
+    display: block;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.checkbox-dropdown-list li label:hover {
+    background-color: #c41230;
+    color: white;
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+td#arrive_td {
+    background-color:beige;
+	}
+
+td#depart_td {
+    background-color:beige;
+	}
+	
+td#navigate_td {
+    background-color:beige;
+	}
+
+td#scan_td {
+    background-color:beige;
+}
+
+td#signature_td {
+    height:100px;
+}
+.card {
+	overflow:hidden;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #f9f9f9;
+	border-color: lightgrey;
+}
+
+h1 {
+    margin:0px;
+    padding:10px;
+    padding-bottom:0px;
+	font-size:1.1em;
+}
+
+.card p {
+    margin:0px;
+    padding:10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;   
+    background:#E0E0E0;
+    padding:0px;
+    margin:0px;
+    color:#333;
+    min-height:100%;
+}
+
+.header {
+    text-align:center;
+    position:fixed;
+    height:65px;
+    left:0px;
+    right:0px;
+	background-color: #555555;
+    padding:8px 0px 0px 15px;
+    border-bottom:1px solid #CCC;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.content {  
+    position:fixed;
+    top:85px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:scroll;
+    -webkit-overflow-scrolling:touch;
+    margin-bottom:30px;
+}
+
+.footer {
+	position:fixed;
+	height:18px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	color:888;
+	text-align:center;
+	padding:0px 10px 0px 10px;
+	font-size:12px;
+	color: #fff;
+	padding: 10px;
+	background-color: #555555;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+.settingCard {
+	overflow:hidden;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 1px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 1px;
+	background-color: #f9f9f9;
+	border-color: lightgrey;
+}
+
+.card_status_image {
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+	float:left;
+}
+
+.action_menuIcon {
+    color: #fff;
+}
+
+
+.settingIcon {
+    color: #fff;
+}
+
+div#menu {
+	width: 50%;
+	background-color: lightgrey;
+	position:relative;
+	top:35;
+	right: 0;
+	left: 35%;
+	display:none;
+}
+ul
+{
+list-style-type: none;
+padding: 0;
+margin: 0;
+text-align: left;
+width: 10em;
+}
+
+li
+{
+background-repeat: no-repeat;
+background-position: 100% .4em;
+padding-right: .6em;
+margin: 1em 0;
+}
