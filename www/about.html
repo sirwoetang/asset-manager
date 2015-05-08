@@ -29,33 +29,38 @@
                 <h1>About</h1>
                 <p>Information about Asset Manager</p>
             </div>
+            <!--
 			<div id="logout" class="settingCard">
                 <i style="float:left;margin:28px" class="fa fa-user fa-2x"></i>
                 <h1>Logout</h1>
                 <p>See you later</p>
             </div>
+            -->
         </div>   
         
 	<footer class="footer">&copy; 2015 Viewmetrics</footer>
 	<script>
     $("#scan_page").click(function() {
             event.preventDefault()
+        window.location = "scan.html"
         });
 
     $("#sync").click(function() {
         event.preventDefault()
-        window.location = "route.html"
+        window.location = "index.html"
     });
 
     $("#about").click(function() {
         event.preventDefault()
         window.location = "about.html"
     });
-
+    /*
     $("#logout").click(function() {
         event.preventDefault()
         window.location = "index.html"
     });
+    */
+
 	</script>
     </body>
 
