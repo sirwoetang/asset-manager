@@ -30,7 +30,12 @@
                 <p>Choose item for check-in.</p>
                 <br>
                 <hr>
-                <p>Check in Item: </p><div id="item"></div>
+                <p>Item: </p><div id="item"></div>
+            </div>
+
+            <div id="checkin_submit" class="card">
+                <i style="float:left;margin:28px" class="fa fa-cloud-upload fa-4x"></i>
+                <h1>Check-In</h1>
             </div>
         </div>
         
@@ -49,6 +54,11 @@
         startScan();
         var value = window.localStorage.getItem("last_scan_result");
         $('#item').html(value)
+    });
+
+    $("#checkin_submit").click(function() {
+        event.preventDefault()
+        alert("Send to Server")
     });
 	</script>
     </body>
