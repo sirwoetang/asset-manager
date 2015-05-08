@@ -8,12 +8,18 @@ function startScan() {
             var s = "Result: " + result.text + "<br/>" +
                 "Format: " + result.format + "<br/>" +
                 "Cancelled: " + result.cancelled;
-            //resultDiv.innerHTML = s;
+            window.localStorage.setItem("last_scan_result", result.text);
+            window.localStorage.setItem("last_scan_format", result.format);
+            window.localStorage.setItem("last_scan_cancel_reason", result.cancelled);
+            window.localStorage.setItem("last_scan", s);
             return s
         },
         function (error) {
             alert("Scanning failed: " + error);
-            var s = "error"
+            window.localStorage.setItem("last_scan_result", 'error');
+            window.localStorage.setItem("last_scan_format", 'error');
+            window.localStorage.setItem("last_scan_cancel_reason", error);
+            window.localStorage.setItem("last_scan", 'error');
         }
     );
 }

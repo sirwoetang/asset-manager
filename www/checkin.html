@@ -22,7 +22,7 @@
                 <p>Choose location for check-in</p>
                 <br>
                 <hr>
-                <p>Location: </p>
+                <p>Location: </p><div id="location"></div>
             </div>
             <div id="checkin_item" class="settingCard">
                 <i style="float:left;margin:28px" class="fa fa-dropbox fa-2x"></i>
@@ -30,7 +30,7 @@
                 <p>Choose item for check-in.</p>
                 <br>
                 <hr>
-                <p>Check in Item: </p>
+                <p>Check in Item: </p><div id="item"></div>
             </div>
         </div>
         
@@ -39,11 +39,16 @@
     $("#checkin_location").click(function() {
         event.preventDefault()
         startScan();
+        var value = window.localStorage.getItem("last_scan_result");
+        $('#location').html(value)
+
     });
 
     $("#checkin_item").click(function() {
         event.preventDefault()
         startScan();
+        var value = window.localStorage.getItem("last_scan_result");
+        $('#item').html(value)
     });
 	</script>
     </body>
