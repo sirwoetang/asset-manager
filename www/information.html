@@ -16,23 +16,25 @@
         </div>			
 		
         <div class="content">
-            <div id="information" class="settingCard">
+            <div id="info" class="settingCard">
                 <i style="float:left;margin:28px" class="fa fa-info-circle fa-2x"></i>
                 <h1>Information Scan</h1>
                 <p>Retrieve information about asset.</p>
-                <p>Retrieve information about asset.</p>
-                <p>Retrieve information about asset.</p>
-                <p>Retrieve information about asset.</p>
-                <p>Retrieve information about asset.</p>
-                <p>Retrieve information about asset.</p>
+                <br>
+                <div class="codebox">
+                    <code id="info_box">
+                        Tap to scan
+                    </code>
+                </div>
             </div>
         </div>
         
 	<footer class="footer">&copy; 2015 Viewmetrics</footer>
 	<script>
-    $("#information").click(function() {
+    $("#info").click(function() {
             event.preventDefault()
             startScan();
+            $('#info_box').html('Server reponse: ')
         });
 
 	</script>
