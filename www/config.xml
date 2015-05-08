@@ -6,10 +6,10 @@
         id        = "com.phonegap.mapworx"
         version   = "1.0.0">
 
-    <name>Mapworx Mobile</name>
+    <name>Asset Manager</name>
 
     <description>
-        Mapworx remote trip dispatch.
+        Scan, View, Produce.
     </description>
 
     <author href="http://viewmetrics.co.za" email="support@viewmetrics.co.za">
