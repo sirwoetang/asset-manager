@@ -1,79 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mapworx Login</title>
-<link rel="stylesheet" href="assets/css/login.css" type="text/css" />
-<link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
-<link rel="stylesheet" href="assets/css/fonts.css" type="text/css" />
-
-<script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="phonegap.js"></script>
-</head>
-
-<body>
-
-	<div class="wrapper">
-    	<div class="login-page wd100 mg">
-        	<div class="top-logo" align="center">
-            	<img src="assets/images/login-logo.png" />
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; width=device-width" />
+		
+        <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+		<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <script src="assets/js/jquery-2.1.0.min.js"></script>
+		<script src="phonegap.js"></script>
+    </head>
+    <body>
+        
+		<div class="header">
+			<img src="assets/images/Mapworx_med.png" alt="Mapworx Logo" height="58" width="240" align="left">
+        </div>			
+		
+        <div class="content">
+            <div id="account" class="settingCard">
+                <i style="float:left;margin:28px" class="fa fa-at fa-2x"></i>
+                <h1>Account</h1>
+                <p>Username, Company</p>
             </div>
-            <div class="login-field wd100">
-            	<form>
-                	<div>Enter your username and password</div>
-                    <div><input class="us" type="text" placeholder="username" /></div>
-                    <div><input class="ps" type="password" placeholder="password" /></div>
-                    <div><button id="login"><img src="assets/images/login-icon.png" /> Login</button></div>
-                </form>
+			<div id="sync" class="settingCard">
+                <i style="float:left;margin:28px" class="fa fa-refresh fa-2x"></i>
+                <h1>Sync</h1>
+                <p>Synchronize data with server</p>
             </div>
-        </div>
-    </div>
-    
+			<div id="about" class="settingCard">
+                <i style="float:left;margin:28px" class="fa fa-list fa-2x"></i>
+                <h1>About</h1>
+                <p>Information about Mapworx</p>
+            </div>
+			<div id="logout" class="settingCard">
+                <i style="float:left;margin:28px" class="fa fa-user fa-2x"></i>
+                <h1>Logout</h1>
+                <p>See you later</p>
+            </div>
+        </div>   
+        
 	<footer class="footer">&copy; 2015 Viewmetrics</footer>
-	
 	<script>
-	document.addEventListener("deviceready", onDeviceReady, false);
+    $("#account").click(function() {
+            event.preventDefault()
+        });
 
-	function onDeviceReady() {
-		//alert(device.platform + device.uuid);
-		//navigator.notification.alert("PhoneGap is working");
-	}
-			  
-		$("#login").click(function(event) {
-			event.preventDefault();
-			var permanentStorage = window.localStorage;
-			var username = $("input[type=text]").val()
-			var password = $("input[type=password]").val()
-			permanentStorage.setItem("username",username)
-			permanentStorage.setItem("password",password)
-			window.sessionStorage.setItem('previous_stop', "");
+    $("#sync").click(function() {
+        event.preventDefault()
+        window.location = "route.html"
+    });
 
-			$.ajaxSetup({
-				headers: { 	'Authorization': "Basic "+btoa(username + ":" + password),
-							'Content-Type': "application/json"
-							}
-			});
-			$.ajax({
-				type: "POST",
-				url: "http://li311-100.members.linode.com/device/login",
-				dataType: 'json',
-				async: true,
-				data: JSON.stringify({deviceType: "Android",deviceToken: "363463"}),
-				success: function (data) {
-				},
-				error: function(xhr, status, error) {
-					alert(xhr.responseText);
-				}
-			}).done(function() {
+    $("#about").click(function() {
+        event.preventDefault()
+        window.location = "about.html"
+    });
 
-				window.location = "route.html";
-			}).fail(function() {
-				window.location = "index.html";
-			})
-		});
-
+    $("#logout").click(function() {
+        event.preventDefault()
+        window.location = "index.html"
+    });
 	</script>
+    </body>
 
-</body>
 </html>
+
