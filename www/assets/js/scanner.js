@@ -2,7 +2,7 @@
  * Created by Waldo on 08/05/2015.
  */
 
-function startScan() {
+function startScan(type) {
     cordova.plugins.barcodeScanner.scan(
         function (result) {
             var s = "Result: " + result.text + "<br/>" +
@@ -12,6 +12,11 @@ function startScan() {
             window.localStorage.setItem("last_scan_format", result.format);
             window.localStorage.setItem("last_scan_cancel_reason", result.cancelled);
             window.localStorage.setItem("last_scan", s);
+            if (type == 'location') {
+                $('#location').html('Location: '+ result.text)
+            } else if (type == 'item') {
+                $('#item').html('Item: '+ result.text)
+            }
             return s
         },
         function (error) {
@@ -20,6 +25,11 @@ function startScan() {
             window.localStorage.setItem("last_scan_format", 'error');
             window.localStorage.setItem("last_scan_cancel_reason", error);
             window.localStorage.setItem("last_scan", 'error');
+            if (type == 'location') {
+                $('#location').html('Error')
+            } else if (type == 'item') {
+                $('#item').html('Error')
+            }
         }
     );
 }

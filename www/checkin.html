@@ -12,8 +12,7 @@
             document.addEventListener("resume", onResume, false);
 
             function onResume() {
-                alert("resume")
-                window.location = "checkin.html";
+
             }
         </script>
     </head>
@@ -59,17 +58,17 @@
 	<script>
     $("#checkin_location").click(function() {
         event.preventDefault()
-        startScan();
-        var value = window.localStorage.getItem("last_scan_result");
-        $('#location').html('Location: '+ value)
+        startScan('location');
+        //var value = window.localStorage.getItem("last_scan_result");
+        //$('#location').html('Location: '+ value)
 
     });
 
     $("#checkin_item").click(function() {
         event.preventDefault()
-        startScan();
-        var value = window.localStorage.getItem("last_scan_result");
-        $('#item').html('Item: '+ value)
+        startScan('item');
+        //var value = window.localStorage.getItem("last_scan_result");
+        //$('#item').html('Item: '+ value)
     });
 
     $("#checkin_submit").click(function() {
